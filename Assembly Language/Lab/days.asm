@@ -1,0 +1,9 @@
+.ORIG x3000
+LEA R0, TITLE
+PUTS
+GETC
+OUT
+HALT
+
+TITLE .STRINGZ "Please enter a no (0-6)"
+.END

@@ -1,0 +1,25 @@
+.ORIG x3000
+    LD R1, INPUT
+    LD R2, OUTPUT
+    AND R0, R0, #0
+    LDR R0, R1, #0
+    BRz DONE
+    ADD R4, R0, #0
+    ADD R0, R0, #-1
+    BRz DONE
+LOOP
+    ADD R5, R4, #0
+    ADD R6, R0, #0
+INNER_LOOP
+    ADD R5, R5, R4
+    ADD R6, R6, #-1
+    BRp INNER_LOOP
+    ADD R4, R5, #0
+    ADD R0, R0, #-1
+    BRp LOOP
+DONE
+    STR R4, R2, #0
+    HALT
+INPUT .FILL x4000
+OUTPUT .FILL x4001
+.END

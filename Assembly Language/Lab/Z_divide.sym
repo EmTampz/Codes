@@ -1,0 +1,7 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	Dividend                3010
+//	Divisor                 3011
+//	EndLoop                 300C
+//	Loop                    3005
+//	Output                  3012

@@ -1,0 +1,27 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	C                       30AA
+//	CENTQUOTIENT            30B1
+//	D                       30B3
+//	DAYS                    3062
+//	DISPLAY                 3034
+//	DIVIDE                  3040
+//	DIVIDELOOP              3047
+//	END                     3061
+//	F                       30B2
+//	FMODULO                 30AB
+//	K                       30A9
+//	LASTNUMQUOTIENT         30B0
+//	LOOP                    3030
+//	M                       30AD
+//	MONQUOTIENT             30AF
+//	MULTIPLY                3036
+//	MULTIPLYLOOP            303B
+//	QUOTEND1                304E
+//	QUOTEND2                304C
+//	R                       30AC
+//	REVISEDCENT             30B4
+//	REVISEDMONTH            30AE
+//	X                       30A8
+//	XJANXFEB                3007
+//	ZELEQ                   3052

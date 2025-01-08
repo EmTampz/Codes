@@ -1,0 +1,8 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	HEX                     3022
+//	MULTIPLICAND            301F
+//	MULTIPLICATION_LOOP     3004
+//	MULTIPLIER              3020
+//	NUM1                    300E
+//	PRODUCT                 3021
