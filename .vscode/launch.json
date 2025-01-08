@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
+      "cwd": "c:/Users/Ms D/Documents/2nd Year/#2nd Sem/142 - Des. Analysis of Algo",
+      "program": "c:/Users/Ms D/Documents/2nd Year/#2nd Sem/142 - Des. Analysis of Algo/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
