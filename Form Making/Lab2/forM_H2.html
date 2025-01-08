@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Form Data Summary</title>
+    <style>
+    h1{
+        text-align:center;
+        color:black;
+    }
+    table {
+        border-collapse: collapse;
+        background-color: aliceblue;
+        margin: 20px auto;
+
+    }
+
+    th {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+    }
+
+    td {
+        border: 1px solid black;
+        padding: 10px;
+
+    }
+
+    /* Add some styles to the body */
+    body {
+        background-color: #f4ffff;
+    }
+</style>
+</head><body>
+    <h1>FORM DATA SUMMARY</h1>
+    <table id="formDataTable">
+        <tr>
+            <th>Label</th>
+            <th>Value</th>
+        </tr>
+    </table>
+   <script>
+    // Function to parse URL parameters
+    function parseUrlParams() {
+        const searchParams = new URLSearchParams(window.location.search);
+        const formData = {};
+
+        // Loop through each parameter and add it to formData object
+        for (const [key, value] of searchParams.entries()) {
+            formData[key] = value;
+        }
+
+        return formData;
+    }
+
+    // Retrieve form data from URL parameters
+    const formData = parseUrlParams();
+
+    // Get the table element
+    const table = document.getElementById('formDataTable');
+
+    // Check if formData is not empty
+    if (Object.keys(formData).length !== 0) {
+        // Loop through each key-value pair in the formData
+        for (const label in formData) {
+            if (formData.hasOwnProperty(label)) { // Ensure it's a direct property
+                // Create a new row in the table
+                const row = table.insertRow();
+
+                // Create cells for label and value
+                const labelCell = row.insertCell(0);
+                const valueCell = row.insertCell(1);
+
+                // Set the innerHTML of the cells with the label and corresponding value
+                labelCell.innerHTML = decodeURIComponent(label);
+                valueCell.innerHTML = decodeURIComponent(formData[label]);
+            }
+        }
+    } else {
+        // If formData is empty, display a message indicating no data available
+        const row = table.insertRow();
+        const cell = row.insertCell(0);
+        cell.colSpan = 2;
+        cell.innerHTML = "No form data available.";
+    }
+</script>
+
+</body>
+</html>

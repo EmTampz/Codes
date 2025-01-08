@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crazy Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" type="text/css">
+    <script src="https://kit.fontawesome.com/aa1486cbe5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="form.css">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+</head>
+
+
+<body class="register-body">
+    <nav>
+        <img src="logo.png" class="logo" alt="Logo" title="FirstFlight Travels"> 
+
+        <ul class="navbar">
+            <li>
+                <a href="index.html">Home</a>
+                <a href="forM_H.html">Form</a>
+                <a href="about.html">About Us</a>
+            
+            </li>
+        </ul>
+    </nav>
+    </div>
+    
+    
+    <section class="registration">
+        <div class="register-form">
+
+
+    <!-- <div class="bgpic"> </div> -->
+    <form id="compform" class="container mt-5 " >
+        <div class="formdata1">
+
+        <div class="row">
+
+            <div class="col-10">
+            </div>
+            <div class="col-2">
+                <br/> <br/> <br/>
+                <input type="date" class="form-control" id="Date" name="Date" placeholder="date" required>
+            </div>
+            <div class="col-10">
+            </div>
+            <div class="col-2">
+                <!-- <label for="Date" style="margin-left: 70px;">Date</label> -->
+            </div>
+        </div>
+        <div class="row">
+        </div>
+            <div class="row fs-3">
+                <div class="col-12">
+                    <h3><b>The Board of Trustees</b></h3>
+                </div>
+                <div class="col-3 form-floating mb-2">
+                    <input type="text" class="form-control" id="Company Name" name="Company Name" placeholder="Company Name">
+                    <label for="Company Name"></label>
+                </div>
+                <div class="col-9 form-floating mb-0">
+                </div>
+                <div class="col-3 form-floating mb-0">
+                    <input type="text" class="form-control" id="Company Complex" name="Company Complex" placeholder="Company Complex">
+                    <label for="Company Complex"></label>
+                </div>
+                <div class="col-9 form-floating mb-0">
+                </div>
+                <div class="col-3 form-floating mb-0">
+                    <input type="text" class="form-control" id="Company Address" name="Company Address" placeholder="Company Address">
+                    <label for="Company Address"></label>
+                </div>
+                <div class="col-9 form-floating mb-0">
+                </div>
+            </div>
+            <br/>
+            
+
+            <!-- <h4>Gentleman:</h4><br> -->
+            <!-- class="alert alert-info" role="alert" -->
+            <div class="p-2 mb-3 alert alert-info" role="alert">We would like to apply for membership at <b id="dynamicCompanyName">Company A</b> <b>Export Federation</b> as a:</div>
+            <script>
+                document.getElementById('Company Name').addEventListener('input', function() {
+                    document.getElementById('dynamicCompanyName').textContent = this.value || 'Company A';
+                });
+            </script>
+            
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Membership Type" id="regMem" value="Regular Member">
+                <label class="form-check-label" for="regMem">
+                    <b>Regular Member</b>
+                </label>
+            </div>
+
+            <div id="qualifications" style="display:none;">
+                <br><h4 style="margin-left: 5%;">Qualifications:</h4>
+                <p style="margin-left: 5%;">1. Registered exporter of goods and/or services.</p>
+                <p style="margin-left: 5%;">2. In operation for at least one year.</p>
+                <p style="margin-left: 5%;">3. Sponsored by any member of the Board of Trustees.</p>
+                <p style="margin-left: 5%;">4. No serious derogatory information about them supplied by reliable sources.</p>
+            </div>
+
+            <script>
+                document.getElementById('regMem').addEventListener('change', function() {
+                    var qualificationsDiv = document.getElementById('qualifications');
+                    qualificationsDiv.style.display = this.checked ? 'block' : 'none';
+                    
+                });
+            </script>
+
+            <div class="form-check" style="margin-top:15px;">
+                <input class="form-check-input" type="checkbox" id="assocMem" name="Associate Member">
+                <label class="form-check-label" for="assocMem"><b>Associate Member</b></label>
+            </div>
+            
+            <div id="Comp_Prof">
+                <!-- Default content here -->
+            </div>
+            
+            <div id="assocQualifications" style="display:none; margin-top: 15px;">
+                <section style="margin-left: 5%;">
+                    <h4>Qualifications:</h4>
+                    <p>1. Companies other than direct exporters that contribute to Philippine exports such as:</p>
+                    <ol type="a">
+                        <li>Banks</li>
+                        <li>Shipping Companies</li>
+                        <li>Airline Companies</li>
+                        <li>Insurance Companies</li>
+                        <li>Chamber of Commerce/Trade Association</li>
+                        <li>Trucking/Freight Companies</li>
+                        <li>Brokers/Forwarders</li>
+                        <li>Producers of Packing Materials</li>
+                        <li>Foreign Buyers</li>
+                        <li>Printers</li>
+                        <li>Hotels</li>
+                        <li>Trading Companies</li>
+                        <li>Others:</li>
+                    </ol>
+                    <p>2. Registered in the Philippines.</p>
+                    <p>3. In operation for at least one year.</p>
+                    <p>4. Sponsored by any member of the Board of Trustees.</p>
+                    <p>5. No serious derogatory information about them supplied by reliable sources.</p>
+                </section>
+            </div>
+
+
+ 
+  
+  
+            
+            
+
+            <div class="form-check" style="margin-top:15px;">
+                <input class="form-check-input" type="checkbox" id="provMem" name="Provisional Member">
+                <label class="form-check-label" for="provMem"><b>Provisional Member</b></label>
+            </div>
+
+            <div id="provQualifications" style="display:none;">
+                <section style="margin-left: 5%;">
+                    <h4>Qualifications:</h4>
+                    <p>1. Registered exporter of goods and/or services.</p>
+                    <p>2. Sponsored by any member of the Board of Trustees.</p>
+                    <p>3. No serious derogatory information about them supplied by reliable sources.</p>
+                </section>
+            </div>
+
+            <script>
+                document.getElementById('provMem').addEventListener('change', function() {
+                    var provQualificationsDiv = document.getElementById('provQualifications');
+                    provQualificationsDiv.style.display = this.checked ? 'block' : 'none';
+                });
+            </script>
+
+            <br/>
+            <div class="form-check form-check-inline" style="text-align: justify;">
+                <input class="form-check-input" type="radio" id="agreeFees" name="Acceptance" required style="transform: scale(0.8); margin-right: 5px;">
+                <label class="form-check-label" for="agreeFees" style="font-style: italic; ">
+                    I understand that an annual membership fee of P2,000 and a one-time entrance fee of P700.00 is payable on the date of approval of application.
+                </label>
+            </div><br>
+            <script>
+                document.getElementById('agreeFees').addEventListener('click', function() {
+                    this.wasChecked = !this.wasChecked;
+                    this.checked = this.wasChecked;
+                });
+            </script>
+            <br/>
+            <p class="text-justify text-muted"><small>*Applicants who have been in operation for less than one (1) year, but who otherwise qualify as regular members, shall be admitted as provisional members.</small></p>
+        
+            
+
+            <div class="col-12 mb-3">
+                <div class="row">
+                    <div class="col-2">
+                        <label class="form-label" for="Name_of_Trustee">Full Name of Trustee</label>
+                     </div>
+                    <div class="col-4">
+                         <input type="text" class="form-control" id="Name_of_Trustee" name="Name of Trustee">
+                    </div>
+                </div>
+          </div>
+        <div class="col-12 mb-3">
+                <div class="row">
+                    <div class="col-2">
+                        <label class="form-label">Signature of Trustee:</label>
+                    </div>
+                    <div class="col-4">
+                        <!-- <input type="text" class="form-control" id="phone"> -->
+                        <hr class="w-30">
+                    </div>
+                </div>
+        </div>
+        <div class="col-12 mb-3">
+            <div class="row">
+                <div class="col-2">
+                    <label class="form-label" for="Company1">Company:</label>
+                 </div>
+                <div class="col-4">
+                     <input type="text" class="form-control" id="Company1"name="Company Name1">
+                </div>
+            </div>
+       </div>
+
+        <!-- Changed the input type to button and added an onclick event -->
+        <!-- <input type="button" value="Display Data" style="width:200px" onclick="displayFormData()"> -->
+
+        <script>
+            function displayFormData() {
+                const date = document.getElementById('Date').value;
+                const companyName = document.getElementById('companyName').value;
+                const companyComplex = document.getElementById('companyComplex').value;
+                const companyAddress = document.getElementById('companyAddress').value;
+                const regMem = document.getElementById('regMem').checked;
+                const assocMem = document.getElementById('assocMem').checked;
+                const provMem = document.getElementById('provMem').checked;
+                const Name_of_Trustee = document.getElementById('Name_of_Trustee').value;
+                const Company = document.getElementById('Company').value;
+
+                const formData = {
+                    'Date': date,
+                    'Company Name': companyName,
+                    'Company Complex': companyComplex,
+                    'Company Address': companyAddress,
+                    'Membership Type': regMem ? 'Regular Member' : assocMem ? 'Associate Member' : provMem ? 'Provisional Member' : '',
+                    'Name of Trustee': Name_of_Trustee,
+                    'Company': Company
+                };
+
+                sessionStorage.setItem('formData', JSON.stringify(formData));
+
+                // Redirect to the separate HTML page
+                window.location.href = 'forM_H2.html';
+            }
+        </script>
+   
+
+        <br/> <br/>
+             <h1 style="text-align: center;">Industry Classification Form</h1>
+            <p style="text-align: justify;">This form is for the purpose of classifying the <b>Regular membership</b> into the fourteen (14) identified
+            industry sectors. Please submit this form together with the other duly accomplished application forms.</p>
+
+            <div class="form-group" style="margin-left: 30%; width:40%; margin-top: 20px;">
+                <input type="text" class="form-control text-center" id="namecomp" name="Name of Company" placeholder="Name of Company" required>
+            </div><br>
+            <div class="form-group" style="margin-left: 30%;  width:40%; margin-top: 20px;">
+                <input type="text" class="form-control text-center" id="representative" name="Authorized Representative" placeholder="Printed name of authorized representative" required>
+            </div><br><br>
+            <hr style="margin-left: 30%; width: 40%; height: 1px; border-width: 0; color: black; background-color: black;" >
+            <p style="text-align: center;">Signature of authorized representative</p><br><br>
+            <!-- <div class="form-group" style="margin-left: 30%;  width:40%; margin-top: 20px;">
+                <input type="date" class="form-control text-center" id="dateform" name="Date" placeholder="Date" required>
+            </div>--><br><br><br> 
+
+    
+            <div class="alert alert-info" role="alert">
+                <p class="mb-0" style="font-size: small;">Check only one industry category based on your preference; if involved in more than one industry, choose the industry sector to which you would most like to belong.</p>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input type="checkbox" name="Automotive parts and accessories" id="automotive" onclick="toggleCheck('automotive')" class="checkbox-input"> <label for="automotive">Automotive parts and accessories</label><br>
+                    <input type="checkbox" name="Chemicals" id="chemicals" onclick="toggleCheck('chemicals')" class="checkbox-input"> <label for="chemicals">Chemicals</label><br>
+                    <input type="checkbox" name="Electronics" id="electronics" onclick="toggleCheck('electronics')" class="checkbox-input"> <label for="electronics">Electronics</label><br>
+                    <input type="checkbox" name="Fashion" id="fashion" onclick="toggleCheck('fashion')" class="checkbox-input"> <label for="fashion">Fashion accessories fine jewelry</label><br>
+                    <input type="checkbox" name="Food" id="food" onclick="toggleCheck('food')" class="checkbox-input"> <label for="food">Fresh and processed food</label><br>
+                    <input type="checkbox" name="Footwear" id="footwear" onclick="toggleCheck('footwear')" class="checkbox-input"> <label for="footwear">Footwear and travelgoods</label><br>
+                    <input type="checkbox" name="Furniture" id="furniture" onclick="toggleCheck('furniture')" class="checkbox-input"> <label for="furniture">Furniture</label><br>
+                </div>
+                <div class="col-6">
+                    <input type="checkbox" name="Garments" id="garments" onclick="toggleCheck('garments')" class="checkbox-input"> <label for="garments">Garments</label><br>
+                    <input type="checkbox" name="Gifts, Toys and Housewares" id="gifts" onclick="toggleCheck('gifts')" class="checkbox-input"> <label for="gifts">Gifts, toys and housewares</label><br>
+                    <input type="checkbox" name="IT Products" id="it" onclick="toggleCheck('it')" class="checkbox-input"> <label for="it">Information technology products and services</label><br>
+                    <input type="checkbox" name="Metal Manufacturers" id="metal" onclick="toggleCheck('metal')" class="checkbox-input"> <label for="metal">Metal manufacturers</label><br>
+                    <input type="checkbox" name="Non-metallic Manufacturers" id="non-metallic" onclick="toggleCheck('non-metallic')" class="checkbox-input"> <label for="non-metallic">Non-metallic mineral manufactures</label><br>
+                    <input type="checkbox" name="Resource-based Products" id="resource" onclick="toggleCheck('resource')" class="checkbox-input"> <label for="resource">Resource-based products (traditional and non-traditional)</label><br>
+                    <input type="checkbox" name="Textile yarns and Products" id="textile" onclick="toggleCheck('textile')" class="checkbox-input"> <label for="textile">Textile yarns and fabrics</label><br>
+                </div>
+            </div>
+            
+            <script>
+                function toggleCheck(id) {
+                    var checkboxes = document.getElementsByName('induschoice');
+                    checkboxes.forEach(function(checkbox) {
+                        if (checkbox.id !== id) {
+                            checkbox.checked = false;
+                        }
+                    });
+                }
+            </script><br><br>
+            
+            <p class="text-justify text-muted"> <small>* This name must be that of the person designated as the contact person in the Company's
+            profile. This person will be expected to attend all special and general membership meetings. If unable
+            to attend any meeting, this person must assign his proxy to his appointed representative or to the company.</small></p>
+            <p  class="text-justify text-muted"><small><i>If you have questions regarding the classification of your company, please contact <b>MEMBERSHIP DIVISION</b>.</i> </small></p>
+            <p  class="text-justify text-danger"><small>IMPORTANT: Please enclose picture/brochures (promotional materials) of your products /services you offered.</small></p>
+            <br><br><br> 
+        </div>
+    </div>
+ 
+    
+    <hr style="width: 102%; margin-left: -10px; height: 2px; border-width: 0; color: black; background-color: black;" >
+
+    <div class="formdata2">
+        <div class="secondpart">
+    <div class="row">
+        <div class="col-10">
+        </div>
+        <div class="col-2">
+            <input type="number" id="controlnum" name="Control Number 1" placeholder="Control Number" required class="form-control">
+        </div>
+        
+        <div id="group1">
+            <div class="row">
+        <div class="col-10">
+        </div>
+       <div class="12">
+            <h1 style="text-align: center;">Company Profile</h1><br><br>
+        </div>   
+            <div class="col-2 mb-3">
+                <label for="compName">Company Name:</label>
+             </div>
+             <div class="col-10 mb-3">
+                <input type="text" class="form-control" id="comp_Name" name="Company Name" >
+        </div>
+        
+            <!-- <hr style="width: 102%; margin-left: -10px; height: 2px; border-width: 0; color: black; background-color: black;" ><br><br> -->
+        
+        <div class="row">
+            <div class="col-2 mb-3">
+                <label for="compName">Chief Executive:</label>
+             </div>
+             <div class="col-3 mb-3">
+                <input type="text" class="form-control" id="CE_Surname" name=">Chief Executive Surname"  placeholder="Surname">
+            </div>
+            <div class="col-3 mb-3">
+                <input type="text" class="form-control" id="CE_FN" name="Chief Executive First"  placeholder="First Name">
+            </div>
+            <div class="col-1 mb-3">
+                <input type="text" class="form-control" id="CE_MI" name="Chief Executive Middle Initial" placeholder=" M.I.">
+            </div>
+            <div class="col-3 mb-3">
+                <input type="text" class="form-control" id="CE_Pos" name="Chief Executive Position" placeholder="Position">
+            </div>
+
+            <div class="col-12">
+                <label for="compName">Contact Person</label>
+             </div>
+            <div class="col-2">
+                <label for="compName"> &nbsp; &nbsp;For Inquiries:</label>
+             </div>
+             <div class="col-3 mb-3">
+                <input type="text" class="form-control" id="CP_Surname" name="Contact Person Surname"  placeholder="Surname">
+            </div>
+            <div class="col-3 mb-3">
+                <input type="text" class="form-control" id="CE_FN" name="Contact Person First Name"  placeholder="First Name">
+            </div>
+            <div class="col-1 mb-3">
+                <input type="text" class="form-control" id="CE_MI" name="Contact Person Middle Initial" placeholder=" M.I.">
+            </div>
+            <div class="col-3 mb-3">
+                <input type="text" class="form-control" id="CE_Pos" name="Contact Person Posistion" placeholder="Position">
+            </div>
+        </div>
+        
+    
+             <div class="col-12">
+            <p>Address: <b>OFFICE FACTORY</b></p>
+             </div>
+             <div class="col-2">
+                <label for="compName">No./Bldg. Name</label>
+             </div>
+             <div class="col-4 mb-3">
+                <input type="text" class="form-control" id="CP_Blg" name="No./ Bldg. Name"  placeholder=" Tower 2, Apple Bldg. ">
+            </div>
+            <div class="col-2">
+                <label for="compName">Street Name</label>
+             </div>
+            <div class="col-4 mb-3">
+                <input type="text" class="form-control" id="CP_Street" name="Street"  placeholder="Parkson">
+            </div>
+
+            <div class="col-2">
+                <label for="compName">Mun/City:</label>
+             </div>
+             <div class="col-3 mb-3">
+                <input type="text" class="form-control" id="CP_muncit" name="Mun/city"  placeholder=" Lot City ">
+            </div>
+            <div class="col-1">
+                <label for="compName">Province:</label>
+             </div>
+            <div class="col-3 mb-3">
+                <input type="text" class="form-control" id="CP_provi" name="Province"  placeholder="Apostlee">
+            </div>
+            <div class="col-1">
+                <label for="compName">Region:</label>
+             </div>
+            <div class="col-2 mb-3">
+                <input type="text" class="form-control" id="CP_regi" name="Region"  placeholder="Arctic">
+            </div>
+
+            <div class="col-2 mb-3">
+                <label for="compName">Tel.No.</label>
+             </div>
+            <div class="col-4 mb-3">
+                <input type="number" class="form-control" id="CP_telnos" name="Tel. No."  placeholder="1112234">
+            </div>
+            <div class="col-2 mb-3">
+                <label for="compName">Telex.No.</label>
+             </div>
+            <div class="col-4 mb-3">
+                <input type="number" class="form-control" id="CP_telex" name="Telex No."  placeholder="30303030">
+            </div>
+            <div class="col-2 mb-3">
+                <label for="compName">Email</label>
+             </div>
+            <div class="col-4 mb-3">
+                <input type="email" class="form-control" id="CP_email" name="Email"  placeholder="mmtampogao@gmail.com">
+            </div>
+            <div class="col-2 mb-3">
+                <label for="compName">Facsmile</label>
+             </div>
+            <div class="col-4 mb-3">
+                <input type="text" class="form-control" id="CP_facsmile" name="Facsmile"  placeholder="(123)-456-7890">
+            </div>     
+            
+    </div> 
+    <br/>
+    <br/>
+    <!-- //row end -->
+
+            <hr style="width: 102%; margin-left: -10px; height: 2px; border-width: 0; color: black; background-color: black;" >
+
+            <div class="row">
+            <div class="col-12">
+            <p class="text-justify text-muted"> <small><b>PRODUCTS ALREADY EXPORTED AS OF PREVIOUS YEAR:</b></small></p>
+            <p class="text-justify text-muted">(Please rank highest to lowest according to production volume)</p>
+            <p class="text-justify text-muted" style="text-align: right; margin-right: 20px;">(For EDP use only)</p>
+             </div>
+             
+            <div class=" col-6">
+            <label for="bname" style="font-size: larger; margin-left: 250px;">BRANDNAMES</label>
+            </div>
+            <div class=" col-6">
+            <label for="pcode" style="font-size: larger; margin-left: 38%;">PRODUCT CODE</label><br>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dynamicTable">
+                    <thead>
+                        <tr>
+                            <!-- <th>Brand Name</th>
+                            <th>Product Code</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="1_BN" name="Brand Name"></td>
+                            <td><input type="text" class="form-control" id="1_PC" name="Product Code"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+           <div class="row">
+                <div class="col-3">
+                </div>
+                <div class=" col-3">
+                    <button type="button" class="form-control btn btn-primary" onclick="addRow()">Add Row</button>
+                </div>
+                <div class=" col-3">
+                    <button type="button" class="form-control btn btn-danger" onclick="deleteLastRow()">Delete Row</button>
+                </div>
+                <div class="col-3">
+                </div>
+           
+        </div>
+           
+            <script>
+                function addRow() {
+                    var table = document.getElementById("dynamicTable").getElementsByTagName('tbody')[0];
+                    var newRow = table.insertRow(table.rows.length);
+                    var cell1 = newRow.insertCell(0);
+                    var cell2 = newRow.insertCell(1);
+                    cell1.innerHTML = '<input type="text" class="form-control" name="BN[]" placeholder="Brand Name">';
+                    cell2.innerHTML = '<input type="text" class="form-control" name="PC[]"placeholder=" Product Code">';
+                    
+                    // Keep the current view without scrolling
+                }
+                
+                function deleteLastRow() {
+                    var table = document.getElementById("dynamicTable").getElementsByTagName('tbody')[0];
+                    if (table.rows.length > 1) {
+                        table.deleteRow(table.rows.length - 1);
+                    }
+                }
+            </script>
+
+
+          
+            <br/> <br/>
+            <hr style="width: 102%; margin-left: -10px; height: 2px; border-width: 0; color: black; background-color: black;" ><br><br>
+                        
+                         <div class="row">
+                            <div class="col-12">
+                                <p class="text-justify text-muted"> <small><b>PRODUCTS PRODUCED FOR DOMESTIC MARKET ONLY AS OF PREVIOUS YEAR:</b></small></p>
+                            <p class="text-justify text-muted">(Please rank highest to lowest according to production volume)</p>
+                            <p class="text-justify text-muted" style="text-align: right; margin-right: 20px;">(For EDP use only)</p>
+                             </div>
+                             
+                            <div class=" col-6">
+                            <label for="bname1" style="font-size: larger; margin-left: 250px;">BRANDNAMES</label>
+                            </div>
+                            <div class=" col-6">
+                            <label for="pcode1" style="font-size: larger; margin-left: 38%;">PRODUCT CODE</label><br>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dynamicTable2">
+                                    <thead>
+                                        <tr>
+                                            <!-- <th>Brand Name</th>
+                                            <th>Product Code</th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="text" class="form-control" id="1_BN2" name="Brand Name 2"></td>
+                                            <td><input type="text" class="form-control" id="1_PC2" name="Product Code 2"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                           <div class="row">
+                                <div class="col-3">
+                                </div>
+                                <div class=" col-3">
+                                    <button type="button" class="form-control btn btn-primary" onclick="addRow2()">Add Row</button>
+                                </div>
+                                <div class=" col-3">
+                                    <button type="button" class="form-control btn btn-danger" onclick="deleteLastRow2()">Delete Row</button>
+                                </div>
+                                <div class="col-3">
+                                </div>
+                           
+                        </div>
+                        <br/> <br/> <br/>
+                        <div class="col-10">
+                        </div>
+                        <div class="col-2">
+                            <!-- <input type="number" id="controlnum2" name="Control Number 2" placeholder="Control Number" required class="form-control"> -->
+                        </div>
+                           
+                            <script>
+                                function addRow2() {
+                                    var table = document.getElementById("dynamicTable2").getElementsByTagName('tbody')[0];
+                                    var newRow = table.insertRow(table.rows.length);
+                                    var cell1 = newRow.insertCell(0);
+                                    var cell2 = newRow.insertCell(1);
+                                    cell1.innerHTML = '<input type="text" class="form-control" name="BN2[]" placeholder="Brand Name">';
+                                    cell2.innerHTML = '<input type="text" class="form-control" name="PC2[]" placeholder="Product Code">';
+                                    // Keep the current view without scrolling
+                                }
+                                
+                                function deleteLastRow2() {
+                                    var table = document.getElementById("dynamicTable2").getElementsByTagName('tbody')[0];
+                                    if (table.rows.length > 1) {
+                                        table.deleteRow(table.rows.length - 1);
+                                    }
+                                }
+                            </script>
+                
+                
+                          
+                          
+
+    </div>
+</div>
+</div>
+<div class="text-center">
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+
+<!-- comp profile end -->
+
+</div> 
+  <!-- row end -->
+  <hr style="width: 102%; margin-left: -10px; height: 2px; border-width: 0; color: black; background-color: black;" >
+
+  <div id="group2">
+  <div class="row">
+  <div id="Product_sheet">
+    <div class="formdata3">
+        <div class="thirdpart">
+            
+            <br><h1 style="text-align: center;">Product Sheet</h1>
+            <p style="text-align: center;"><b>(Please use separate sheet for every product group)</b></p><br><br>
+            
+            <!-- <div class="row">
+                <div class="col-2 mb-3">
+            <label for="compName" style="margin-left: 20px;">Company Name:</label>
+              </div>  
+              <div class="col-10 mb-3">
+                <input type="text" class="form-control" id="PS_compname" name="Compny Name">
+            </div> -->
+
+            <div class="row">
+                <div class="col-2 mb-3">
+            <label for="productz" style="margin-left: 20px;">Product:</label>
+              </div>
+              <div class="col-10 mb-3">
+                <input type="text" class="form-control" id="PS_prod" name="Product">
+            </div>
+              
+            <div class="col-4 mb-3">
+                <label for="prod_des" style="margin-left: 20px;">Product Description and Specifications:</label>
+            </div>
+            <div class="col-8 mb-3"> 
+            </div>
+
+            <div class="col-2"> 
+                <label style="margin-left: 20px;">Brand Name:</label> 
+            </div>
+            <div class="col-5 mb-3"> 
+                <input type="text" class="form-control" id="PS_loc" name="Brand Name (Local)" placeholder="Local">
+            </div>
+            <div class="col-5"> 
+                <input type="text" class="form-control" id="PS_exp" name="Brand Name (Export)" placeholder="Export">
+            </div>
+
+
+            <div class="col-2 mb-2"> 
+                
+            </div>
+            <div class="col-10 mb-2"> 
+                <input type="text" class="form-control" id="PS_tech_spec" name="Technical Specifications" placeholder="Technical Specifications">
+            </div>
+            <div class="col-2 mb-2"> 
+                
+            </div>
+            <div class="col-10 mb-2"> 
+                <input type="text" class="form-control" id="PS_funct" name="Function" placeholder="Function">
+            </div>
+            <div class="col-2 mb-2"> 
+                
+            </div>
+            <div class="col-5 mb-2"> 
+                <input type="text" class="form-control" id="PS_color" name="Color" placeholder="Color">
+            </div>
+            <div class="col-5 mb-2"> 
+                <input type="text" class="form-control" id="PS_size" name="Size" placeholder="Size">
+            </div>
+            <div class="col-2 mb-2"> 
+                
+            </div>
+            <div class="col-10 mb-2"> 
+                <input type="text" class="form-control" id="PS_packaging" name="Packaging/Labeling/Marking Details" placeholder="Packaging/Labeling/Marking Details">
+            </div>
+
+            <div class="col-12 mb-2" style="font-weight: bolder;"> 
+                 <label>Packing Details: (Please indicate unit used, whether piece, bottle, par, etc.)</label> 
+            
+            </div>
+            <div class="col-2 mb-2" style="font-weight: bolder;"> 
+                <input type="number" class="form-control" id="PS_unit" name="Unit" placeholder="Unit">
+           </div>
+           <div class="col-3 mb-2" style="font-weight: bolder;"> 
+            <input type="number" class="form-control" id="PS_netw" name="Net weight/unit" placeholder="Net weight/unit">
+            </div>
+            <div class="col-3 mb-2" style="font-weight: bolder;"> 
+                <input type="number" class="form-control" id="PS_grossw" name="Gross weight/unit" placeholder="Gross weight/unit">
+                </div>
+                <div class="col-2 mb-2" style="font-weight: bolder;"> 
+                    <input type="number" class="form-control" id="PS_nunit" name="No.of Units/pack" placeholder="No.of Units/pack">
+                    </div>
+                    <div class="col-2 mb-2" style="font-weight: bolder;"> 
+                        <input type="number" class="form-control" id="PS_weight" name="Weight/pack" placeholder="Weight/pack">
+                        </div>
+                        
+                        <div class="col-6 mb-2" style="font-weight: bolder;"> 
+                            <input type="number" class="form-control" id="PS_20_fcl" name="No. of units per 20 FCL" placeholder="No. of units per 20 FCL">
+                            </div>
+                            <div class="col-6 mb-2" style="font-weight: bolder;"> 
+                                <input type="number" class="form-control" id="PS_40_fcl" name="No. of units per 40 FCL" placeholder="No. of units per 40 FCL">
+                                </div>
+           
+            
+
+        <hr style="width: 102%; margin-left: -10px; height: 2px; border-width: 0; color: black; background-color: black;" ><br><br>
+
+
+        <div class="col-12 mb-2" style="margin-left: 20px; font-weight: bolder;"> 
+            <label>Major Raw Materials/Components Used:</label> 
+       </div>
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dynamicTable3">
+                <thead>
+                    <tr>
+                        <th>Materials</th>
+                        <th>Quantity required</th> 
+                        <th>%Domestic</th>
+                        <th>%Imported</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" id="1_Materials" name="Materials"></td>
+                        <td><input type="number" class="form-control" id="1_QR" name="Quantity required"></td>
+                        <td><input type="number" class="form-control" id="1_Dome" name="%Domestic"></td>
+                        <td><input type="number" class="form-control" id="1_Impo" name="%Domestic"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+       <div class="row">
+            <div class="col-3">
+            </div>
+            <div class=" col-3">
+                <button type="button" class="form-control btn btn-primary" onclick="addRow3()">Add Row</button>
+            </div>
+            <div class=" col-3">
+                <button type="button" class="form-control btn btn-danger" onclick="deleteLastRow3()">Delete Row</button>
+            </div>
+            <div class="col-3">
+            </div>
+       
+    </div>
+       
+        <script>
+            function addRow3() {
+                var table = document.getElementById("dynamicTable3").getElementsByTagName('tbody')[0];
+                var newRow = table.insertRow(table.rows.length);
+                var cell1 = newRow.insertCell(0);
+                var cell2 = newRow.insertCell(1);
+                var cell3 = newRow.insertCell(2);
+                var cell4 = newRow.insertCell(3);
+                cell1.innerHTML = '<input type="text" class="form-control" name="Materials[]" placeholder="">';
+                cell2.innerHTML = '<input type="text" class="form-control" name="QR[]" placeholder="">';
+                cell3.innerHTML = '<input type="text" class="form-control" name="Dome[]" placeholder="">';
+                cell4.innerHTML = '<input type="text" class="form-control" name="Impo[]" placeholder="">';
+                
+                // Keep the current view without scrolling
+            }
+            
+            function deleteLastRow3() {
+                var table = document.getElementById("dynamicTable3").getElementsByTagName('tbody')[0];
+                if (table.rows.length > 1) {
+                    table.deleteRow(table.rows.length - 1);
+                }
+            }
+        </script>
+
+
+            <br/> <br/> <br/>
+
+        <div class="col-4 mb-3"> 
+            <label style="margin-left: 20px;">Production Technology/Patents/PSA License:</label> 
+        </div>
+        <div class="col-8 mb-3"> 
+            <input type="text" class="form-control" id="PPP" name="Production Technology/Patents/PSA License:" >
+        </div>
+
+        <div class="col-4 mb-3"> 
+            <label style="margin-left: 20px;">Technical Skills Available:</label> 
+        </div>
+        <div class="col-8 mb-3"> 
+            <input type="text" class="form-control" id="TSA" name="Technical Skills Available:" >
+        </div>
+
+        <hr style="width: 102%; margin-left: -10px; height: 2px; border-width: 0; color: black; background-color: black;" ><br><br>
+        
+        <div class="col-10 mb-3"> 
+            <label style="margin-left: 20px; font-weight: bolder;">Availability of Sales Aids (Please enclose available sales aids)</label> 
+        </div>
+        <div class="col-2 mb-3"> 
+          
+        </div>
+
+      
+        <div class="col-2 form-check">
+            <input type="checkbox" class="form-check-input" id="Samples" name="Samples" value="Samples">
+            <label class="form-check-label" for="Samples">Samples  </label>
+        </div>
+        
+        <div class="col-2 form-check">
+            <input type="checkbox" class="form-check-input"  id="Photos" name="Photos" value="Photos">
+            <label class="form-check-label"for="Photos">Photos </label>
+        </div>
+        
+        <div class="col-2 form-check">
+            <input type="checkbox" class="form-check-input" id="Catalogues" name="Catalogues" value="Catalogues">
+            <label class="form-check-label" for="Catalogues">Catalogues  </label>
+        </div>
+        
+        <div class="col-2 form-check">
+            <input type="checkbox" class="form-check-input" id="Price List" name="PriceList" value="Price list">
+            <label class="form-check-label" for="Price List">Price List</label>
+        </div>
+       
+        <div class="col-1">
+            <label class="form-check-label"  for="other">Other</label>
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" id="other" name="other1" value="">
+        </div>
+        <!-- </div> -->
+
+       <br/>   <br/>   <br/>   <br/>
+        <div class="col-10">
+        </div>
+        <!-- <div class="col-2">
+             <input type="number" id="controlnum3" name="Control Number 3" placeholder="Control Number"  class="form-control" style="display: block;">
+        </div> -->
+        
+        </div>
+    </div>
+    <br/><br/>
+</div>
+<!-- end of prod sheet -->
+
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        
+        <br/> <br/> <br/>
+    </div>
+    <!-- end of row -->
+    </form>
+    
+    <script>
+        document.getElementById('assocMem').addEventListener('change', function() {
+          var assocMemCheckbox = document.getElementById('assocMem');
+          var group2Div = document.getElementById('group2');
+          
+          group2Div.style.display = assocMemCheckbox.checked ? 'none' : 'block';
+        });
+      </script>
+
+    <br/> <br/> <br/>
+    
+
+    <script>
+        document.getElementById("compform").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+    
+            // Get all form data
+            const formData = new FormData(this);
+    
+            // Add the state of checkboxes to the form data
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(function(checkbox) {
+                formData.append(checkbox.name, checkbox.checked ? checkbox.value : ''); // Include only checked checkboxes
+            });
+    
+            // Construct the URL-encoded string
+            let urlEncodedData = "";
+            for (const [key, value] of formData.entries()) {
+                urlEncodedData += encodeURIComponent(key) + '=' + encodeURIComponent(value) + '&';
+            }
+    
+            // Remove the trailing '&' character
+            urlEncodedData = urlEncodedData.slice(0, -1);
+    
+            // Redirect to output page with the form data
+            window.location.href = "forM_H2.html?" + urlEncodedData;
+        });
+    </script>
+    
+    
+
+ </div>
+</section>
+</div>
+</div>
+
+</body>
+
+
+</html>
